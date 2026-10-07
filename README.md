@@ -8,7 +8,7 @@ limiting — and runnable on an **Android phone via Termux**.
 ## Quick run (laptop / PC)
 
 ```bash
-cd scalable-auth-platform
+cd mobile_cloud
 pip install -r requirements.txt
 uvicorn backend.main:app --host 0.0.0.0 --port 8000
 ```
@@ -24,8 +24,8 @@ Open http://127.0.0.1:8000
 ```bash
 pkg update
 pkg install python git -y
-git clone <your-repository-url>
-cd scalable-auth-platform
+git clone https://github.com/singhpriyanshu1234/mobile_cloud.git
+cd mobile_cloud
 pip install --upgrade pip
 pip install -r requirements.txt
 uvicorn backend.main:app --host 0.0.0.0 --port 8000
