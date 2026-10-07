@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scalable Auth Platform</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="top">
+      <strong>Scalable Auth Platform</strong>
+      <span><a href="/login.html">Login</a> · <a href="/signup.html">Sign Up</a></span>
+    </nav>
+    <div class="card">
+      <h1>Scalable Auth Platform</h1>
+      <p class="muted">A system-design demonstration application.</p>
+      <div class="row">
+        <a class="btn" href="/login.html">Login</a>
+        <a class="btn secondary" href="/signup.html">Sign Up</a>
+      </div>
+    </div>
+    <div class="card">
+      <h1 style="font-size:20px">System status</h1>
+      <div class="status">
+        <span>API Status: <span id="api-status" class="pill">checking…</span></span>
+        <span>Database Status: <span id="db-status" class="pill">checking…</span></span>
+      </div>
+      <p class="muted" style="font-size:13px">Live checks against /api/health and /api/health/database.</p>
+    </div>
+  </div>
+  <script src="/js/auth.js"></script>
+  <script>
+    checkHealth();
+  </script>
+</body>
+</html>
