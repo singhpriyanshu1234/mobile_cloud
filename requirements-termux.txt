@@ -1,0 +1,25 @@
+# Termux (Android) friendly variant.
+#
+# WHY THIS FILE EXISTS:
+# Pydantic v2 depends on pydantic-core, a Rust extension with no
+# prebuilt wheel for Termux, so `pip install -r requirements.txt`
+# tries to compile it from source and fails ("Failed building wheel
+# for pydantic-core"). Pydantic v1 is pure Python and installs
+# instantly. FastAPI supports both v1 and v2, and this app only uses
+# basic BaseModel + Field validation, which works identically.
+#
+# USE:
+#   pip install -r requirements-termux.txt
+#
+# (If you have time/disk to spare, the alternative is building from
+# source: `pkg install rust` and then `pip install -r requirements.txt`
+# — expect a ~10 minute build.)
+
+fastapi==0.115.6
+uvicorn==0.34.0
+sqlalchemy==2.0.36
+PyJWT==2.10.1
+passlib==1.7.4
+python-multipart==0.0.20
+python-dotenv==1.0.1
+pydantic>=1.10,<2
